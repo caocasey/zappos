@@ -8,4 +8,6 @@ class Restaurant extends Model
 {
     //
     protected $primaryKey = 'rid';
+    protected $fillable = ['rid', 'rname','rdescription'];
+
 }

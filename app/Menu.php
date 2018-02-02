@@ -8,4 +8,6 @@ class Menu extends Model
 {
     //
      protected $primaryKey = 'mid';
+     protected $fillable = ['mid', 'mname','serve_time','mdescription'];
+
 }

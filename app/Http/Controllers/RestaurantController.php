@@ -32,6 +32,7 @@ class RestaurantController extends Controller
     {
         //
 
+
     }
 
     /**
@@ -43,6 +44,12 @@ class RestaurantController extends Controller
     public function store(Request $request)
     {
         //
+        $restaurant = Restaurant::create($request->all());
+
+        return response()->json([
+            'status'      => 'success',
+            'status_code' => 201,//create object
+        ]);
     }
 
     /**
@@ -95,6 +102,12 @@ class RestaurantController extends Controller
     public function update(Request $request, Restaurant $restaurant)
     {
         //
+        $restaurant->update($request->all());
+
+        return response()->json([
+            'status'      => 'success',
+            'status_code' => 200,//ok
+        ]);
     }
 
     /**
@@ -106,5 +119,12 @@ class RestaurantController extends Controller
     public function destroy(Restaurant $restaurant)
     {
         //
+         $restaurant->delete();
+
+        return response()->json([
+            'status'      => 'success',
+            'status_code' => 204, //null
+        ]);
+
     }
 }

@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+//restaurant
+/*Route::get('api/v1/restaurant/show/{rid}', 'RestaurantController@show');
+Route::get('api/v1/restaurant/index', 'RestaurantController@index');
+
+Route::post('api/v1/restaurant/store', 'RestaurantController@store');
+Route::put('api/v1/restaurant/update/{rid}', 'RestaurantController@update');
+
+Route::delete('api/v1/restaurant/destroy/{rid}', 'RestaurantController@delete');  */

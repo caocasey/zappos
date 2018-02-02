@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-
+Use App\Restaurant;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,9 +17,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
 Route::group(['prefix' => 'v1'], function() {
-    Route::resource('restaurant', 'RestaurantController');
-    Route::resource('menu', 'MenuController');
-    Route::resource('item', 'ItemController');
+    Route::resource('restaurants', 'RestaurantController');
+    Route::resource('menus', 'MenuController');
+    Route::resource('items', 'ItemController');
+
 });

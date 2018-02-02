@@ -42,6 +42,12 @@ class MenuController extends Controller
     public function store(Request $request)
     {
         //
+        $menu = Menu::create($request->all());
+
+        return response()->json([
+            'status'      => 'success',
+            'status_code' => 201,//create object
+        ]);
     }
 
     /**
@@ -97,6 +103,12 @@ class MenuController extends Controller
     public function update(Request $request, Menu $menu)
     {
         //
+        $menu->update($request->all());
+
+        return response()->json([
+            'status'      => 'success',
+            'status_code' => 200,//ok
+        ]);
     }
 
     /**
@@ -108,5 +120,11 @@ class MenuController extends Controller
     public function destroy(Menu $menu)
     {
         //
+        $menu->delete();
+
+        return response()->json([
+            'status'      => 'success',
+            'status_code' => 204, //null
+        ]);
     }
 }

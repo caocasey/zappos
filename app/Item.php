@@ -8,4 +8,5 @@ class Item extends Model
 {
     //
      protected $primaryKey = 'iid';
+     protected $fillable = ['iid', 'iname','idescription'];
 }

@@ -42,6 +42,12 @@ class ItemController extends Controller
     public function store(Request $request)
     {
         //
+        $item = Item::create($request->all());
+
+        return response()->json([
+            'status'      => 'success',
+            'status_code' => 201,//create object
+        ]);
     }
 
     /**
@@ -94,6 +100,12 @@ class ItemController extends Controller
     public function update(Request $request, Item $item)
     {
         //
+        $item->update($request->all());
+
+        return response()->json([
+            'status'      => 'success',
+            'status_code' => 200,//ok
+        ]);
     }
 
     /**
@@ -105,5 +117,11 @@ class ItemController extends Controller
     public function destroy(Item $item)
     {
         //
+        $item->delete();
+
+        return response()->json([
+            'status'      => 'success',
+            'status_code' => 204, //null
+        ]);
     }
 }
