@@ -21,5 +21,6 @@ Route::group(['prefix' => 'v1'], function() {
     Route::resource('restaurants', 'RestaurantController');
     Route::resource('menus', 'MenuController');
     Route::resource('items', 'ItemController');
-
 });
+
+

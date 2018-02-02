@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Restaurant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Redis;
 
 class RestaurantController extends Controller
 {
@@ -61,6 +63,7 @@ class RestaurantController extends Controller
     public function show(Restaurant $restaurant)
     {
         //show a specific restaurant info
+    
         return response()->json([
         'status'      => 'success',
         'status_code' => 200,
@@ -127,4 +130,8 @@ class RestaurantController extends Controller
         ]);
 
     }
+
+    
+    
+
 }

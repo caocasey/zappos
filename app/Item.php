@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Item extends Model
 {
     //
+    //
      protected $primaryKey = 'iid';
-     protected $fillable = ['iid', 'iname','idescription'];
+     //security control
+     protected $fillable = ['iid', 'iname','idescription','menu_id'];
+
 }

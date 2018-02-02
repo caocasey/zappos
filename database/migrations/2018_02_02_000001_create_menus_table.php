@@ -18,6 +18,7 @@ class CreateMenusTable extends Migration
             $table->string('mname'); 
             $table->text('serve_time'); 
             $table->text('mdescription'); 
+            $table->integer('restaurant_rid');
             $table->timestamps();
         });
     }

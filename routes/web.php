@@ -24,3 +24,6 @@ Route::post('api/v1/restaurant/store', 'RestaurantController@store');
 Route::put('api/v1/restaurant/update/{rid}', 'RestaurantController@update');
 
 Route::delete('api/v1/restaurant/destroy/{rid}', 'RestaurantController@delete');  */
+
+Route::get('api/v1/restaurant/getMenu/{rid}', 'OthersController@getMenu');  
+Route::get('api/v1/menu/getItem/{iid}', 'OthersController@getItem');  
